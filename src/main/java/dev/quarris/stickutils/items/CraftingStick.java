@@ -18,7 +18,12 @@ public class CraftingStick extends UtilityStick {
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
-        player.openMenu(new SimpleMenuProvider((id, inv, p) -> new CraftingMenu(id, inv, ContainerLevelAccess.create(level, player.blockPosition())), Component.literal("Crafting Table on a Stick")));
+        player.openMenu(new SimpleMenuProvider((id, inv, p) -> new CraftingMenu(id, inv, ContainerLevelAccess.create(level, player.blockPosition())) {
+            @Override
+            public boolean stillValid(Player player) {
+                return true;
+            }
+        }, Component.literal("Crafting Table on a Stick")));
         return super.use(level, player, hand);
     }
 }
