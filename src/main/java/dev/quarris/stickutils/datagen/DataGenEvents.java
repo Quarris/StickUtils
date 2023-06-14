@@ -3,6 +3,7 @@ package dev.quarris.stickutils.datagen;
 import dev.quarris.stickutils.ModRef;
 import dev.quarris.stickutils.datagen.client.EnUsLangGen;
 import dev.quarris.stickutils.datagen.client.ItemModelGen;
+import dev.quarris.stickutils.datagen.server.RecipeGen;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.data.event.GatherDataEvent;
@@ -18,6 +19,7 @@ public class DataGenEvents {
         PackOutput output = gen.getPackOutput();
         gen.addProvider(event.includeClient(), new ItemModelGen(output, ModRef.ID, event.getExistingFileHelper()));
         gen.addProvider(event.includeClient(), new EnUsLangGen(output, ModRef.ID, "en_us"));
+        gen.addProvider(event.includeServer(), new RecipeGen(output));
 
     }
 

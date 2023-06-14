@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "dev.quarris.stickutils.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "stickutils.refmap.json",
+  "mixins": [
+    "CreeperMixin"
+  ],
+  "client": [
+  ],
+  "minVersion": "0.8"
+}

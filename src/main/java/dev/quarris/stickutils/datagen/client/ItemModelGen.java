@@ -14,5 +14,6 @@ public class ItemModelGen extends ItemModelProvider {
     @Override
     protected void registerModels() {
         this.basicItem(ModItems.CRAFTING_STICK.get());
+        this.basicItem(ModItems.CAT_STICK.get());
     }
 }

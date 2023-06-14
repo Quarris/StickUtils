@@ -13,5 +13,6 @@ public class EnUsLangGen extends LanguageProvider {
     @Override
     protected void addTranslations() {
         this.add(ModItems.CRAFTING_STICK.get(), "Crafting Table on a Stick");
+        this.add(ModItems.CAT_STICK.get(), "Cat on a Stick");
     }
 }
