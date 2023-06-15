@@ -1,6 +1,7 @@
 package dev.quarris.stickutils.items;
 
 import dev.quarris.stickutils.ModRef;
+import dev.quarris.stickutils.registry.ModItems;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.Entity;
@@ -29,9 +30,9 @@ public class CatStick extends UtilityStick {
             ItemStack stack = event.getItemStack();
             if (stack.getItem() == Items.STICK) {
                 if ((target instanceof Ocelot ocelot && !ocelot.isBaby()) || (target instanceof Cat cat && !(cat.isTame() || cat.isBaby()))) {
-                    player.getItemInHand(event.getHand()).shrink(1);
+                    stack.shrink(1);
                     player.addItem(new ItemStack(ModItems.CAT_STICK.get()));
-                    target.kill();
+                    target.discard();
                     event.getLevel().playSound(player, target.getX(), target.getY(), target.getZ(), SoundEvents.CAT_HURT, SoundSource.PLAYERS, 20, 1.1f);
                     event.getLevel().playSound(player, target.getX(), target.getY(), target.getZ(), SoundEvents.CAT_HURT, SoundSource.PLAYERS, 10, 1.3f);
                     event.getLevel().playSound(player, target.getX(), target.getY(), target.getZ(), SoundEvents.CAT_HURT, SoundSource.PLAYERS, 5, 1.5f);

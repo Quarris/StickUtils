@@ -1,6 +1,6 @@
 package dev.quarris.stickutils.mixins;
 
-import dev.quarris.stickutils.items.ModItems;
+import dev.quarris.stickutils.registry.ModItems;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.EntityType;

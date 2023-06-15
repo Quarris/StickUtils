@@ -1,6 +1,6 @@
 package dev.quarris.stickutils;
 
-import dev.quarris.stickutils.items.ModItems;
+import dev.quarris.stickutils.registry.ModItems;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
@@ -17,7 +17,7 @@ public class ModRef {
     public static final Logger LOGGER = LoggerFactory.getLogger(NAME);
 
     public static final CreativeModeTab TAB = CreativeModeTab.builder()
-        .icon(() -> new ItemStack(Items.DIAMOND))
+        .icon(() -> new ItemStack(ModItems.CRAFTING_STICK.get()))
         .title(Component.literal("Utilities on a Stick"))
         .displayItems((params, output) -> {
             ModItems.ITEMS.getEntries().stream().map(RegistryObject::get).forEach(output::accept);

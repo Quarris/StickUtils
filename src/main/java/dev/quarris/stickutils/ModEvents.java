@@ -12,5 +12,4 @@ public class ModEvents {
     public static void registerCreativeTabs(RegisterEvent event) {
         event.register(Registries.CREATIVE_MODE_TAB, ModRef.res("tab"), () -> ModRef.TAB);
     }
-
 }

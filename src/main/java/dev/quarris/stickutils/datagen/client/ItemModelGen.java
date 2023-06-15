@@ -1,6 +1,6 @@
 package dev.quarris.stickutils.datagen.client;
 
-import dev.quarris.stickutils.items.ModItems;
+import dev.quarris.stickutils.registry.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -15,5 +15,6 @@ public class ItemModelGen extends ItemModelProvider {
     protected void registerModels() {
         this.basicItem(ModItems.CRAFTING_STICK.get());
         this.basicItem(ModItems.CAT_STICK.get());
+        this.basicItem(ModItems.CREEPER_STICK.get());
     }
 }
