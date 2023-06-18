@@ -5,19 +5,11 @@ import dev.quarris.stickutils.datagen.client.EnUsLangGen;
 import dev.quarris.stickutils.datagen.client.ItemModelGen;
 import dev.quarris.stickutils.datagen.server.DamageTagsGen;
 import dev.quarris.stickutils.datagen.server.RecipeGen;
-import dev.quarris.stickutils.registry.ModDamages;
-import net.minecraft.core.RegistrySetBuilder;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
-import net.minecraft.world.damagesource.DamageScaling;
-import net.minecraft.world.damagesource.DamageType;
-import net.minecraftforge.common.data.DatapackBuiltinEntriesProvider;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-
-import java.util.Set;
 
 @Mod.EventBusSubscriber(modid = ModRef.ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DataGenEvents {

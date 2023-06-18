@@ -1,6 +1,6 @@
 package dev.quarris.stickutils.datagen.server;
 
-import dev.quarris.stickutils.registry.ModItems;
+import dev.quarris.stickutils.registry.ItemSetup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeCategory;
@@ -19,7 +19,7 @@ public class RecipeGen extends RecipeProvider {
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> builder) {
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, ModItems.CRAFTING_STICK.get())
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, ItemSetup.CRAFTING_STICK.get())
             .requires(Tags.Items.RODS_WOODEN)
             .requires(Items.CRAFTING_TABLE)
             .group("utility_sticks")

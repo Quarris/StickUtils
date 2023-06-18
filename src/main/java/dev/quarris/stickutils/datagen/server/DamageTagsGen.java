@@ -1,6 +1,6 @@
 package dev.quarris.stickutils.datagen.server;
 
-import dev.quarris.stickutils.registry.ModDamages;
+import dev.quarris.stickutils.registry.DamageSetup;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
@@ -21,6 +21,6 @@ public class DamageTagsGen extends TagsProvider<DamageType> {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        this.tag(DamageTypeTags.IS_EXPLOSION).add(ModDamages.CREEPER_STICK);
+        this.tag(DamageTypeTags.IS_EXPLOSION).add(DamageSetup.CREEPER_STICK);
     }
 }
