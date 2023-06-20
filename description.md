@@ -16,3 +16,6 @@ This mod adds variety of utilities on sticks and will continue to add more as ti
 - **Creeper on a Stick**
   - Obtained by Right-Clicking a Cat with a Stick
   - Create portable explosions
+- **Lead on a Stick**
+  - Obtained by crafting a Lead with a Stick
+  - Can capture mobs and release them at another location
