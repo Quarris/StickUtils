@@ -16,5 +16,6 @@ public class ItemModelGen extends ItemModelProvider {
         this.basicItem(ItemSetup.CRAFTING_STICK.get());
         this.basicItem(ItemSetup.CAT_STICK.get());
         this.basicItem(ItemSetup.CREEPER_STICK.get());
+        this.basicItem(ItemSetup.LEAD_STICK.get());
     }
 }

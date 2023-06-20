@@ -6,7 +6,9 @@ import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.Tags;
 
 import java.util.function.Consumer;
@@ -19,11 +21,16 @@ public class RecipeGen extends RecipeProvider {
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> builder) {
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, ItemSetup.CRAFTING_STICK.get())
+        utilityStick(builder, ItemSetup.CRAFTING_STICK.get(), Items.CRAFTING_TABLE);
+        utilityStick(builder, ItemSetup.LEAD_STICK.get(), Items.LEAD);
+    }
+
+    private static void utilityStick(Consumer<FinishedRecipe> builder, Item stick, ItemLike material) {
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, stick)
             .requires(Tags.Items.RODS_WOODEN)
-            .requires(Items.CRAFTING_TABLE)
+            .requires(material)
             .group("utility_sticks")
-            .unlockedBy("has_crafting_table", has(Items.CRAFTING_TABLE))
+            .unlockedBy("has_material", has(material))
             .save(builder);
     }
 }
